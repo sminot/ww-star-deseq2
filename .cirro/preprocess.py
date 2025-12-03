@@ -55,7 +55,7 @@ def parse_contrasts(ds: PreprocessDataset) -> Tuple[pd.DataFrame, str, str, str]
     # Get the metadata provided by the user annotating these samples
     # as a pandas DataFrame.
     meta: pd.DataFrame = ds.samplesheet
-    ds.logger.info(f"User-provided metadata:{meta.to_csv()}")
+    ds.logger.info(f"User-provided metadata:\n{meta.to_csv()}")
 
     # Make sure that the column specified by the user for contasting
     # samples is present.
@@ -105,7 +105,7 @@ def format_inputs_samples(
 
     # Get a table listing the FASTQ files selected by the user.
     # This DataFrame has columns: sample, fastq_1, fastq_2
-    df = ds.wide_samplesheet()
+    df = ds.pivot_samplesheet()
 
     # Reformat this as a list, only including the samples which belong
     # to the reference and comparison groups

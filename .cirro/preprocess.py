@@ -39,7 +39,7 @@ def setup_inputs(ds: PreprocessDataset):
         "star_deseq2.samples": format_inputs_samples(ds, meta_vals, cname, ref, comp),
         "star_deseq2.reference_genome": format_inputs_reference_genome(ds),
         "star_deseq2.reference_level": ref,
-        "star_deseq2.contrast": f"{cname},{comp},{ref}"
+        "star_deseq2.contrast": f"condition,{comp},{ref}"
     }
     write_json("inputs.0.json", inputs)
 
@@ -114,7 +114,7 @@ def format_inputs_samples(
             "name": r["sample"],
             "r1": r["fastq_1"],
             "r2": r["fastq_2"],
-            cname: meta_vals[r["sample"]],
+            "condition": meta_vals[r["sample"]],
         }
         for _, r in df.iterrows()
         if meta_vals[r["sample"]] in [ref, comp]

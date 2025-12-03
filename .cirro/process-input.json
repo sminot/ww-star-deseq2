@@ -1,0 +1,8 @@
+{
+  "reference_genome": "$.dataset.params.reference_genome",
+  "contrast_cname": "$.dataset.params.contrast_cname",
+  "contrast_reference_level": "$.dataset.params.contrast_reference_level",
+  "contrast_comparison_level": "$.dataset.params.contrast_comparison_level",
+  "final_workflow_outputs_dir": "$.dataset.dataPath",
+  "workflow_failure_mode": "$.dataset.params.options.workflow_failure_mode"
+}

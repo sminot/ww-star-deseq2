@@ -4,5 +4,5 @@
   "contrast_reference_level": "$.dataset.params.contrast_reference_level",
   "contrast_comparison_level": "$.dataset.params.contrast_comparison_level",
   "final_workflow_outputs_dir": "$.dataset.dataPath",
-  "workflow_failure_mode": "$.dataset.params.options.workflow_failure_mode"
+  "workflow_failure_mode": "$.dataset.params.workflow_failure_mode"
 }

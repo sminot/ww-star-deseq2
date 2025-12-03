@@ -29,7 +29,7 @@
         "description": "Group name used for comparison",
         "type": "string"
       },
-      "options.workflow_failure_mode": {
+      "workflow_failure_mode": {
         "title": "Workflow Failure Mode",
         "description": "Behavior when individual tasks encounter failures",
         "type": "string",
@@ -44,7 +44,7 @@
       "reference_genome",
       "contrast_cname",
       "contrast_reference_level",
-      "options.workflow_failure_mode"
+      "workflow_failure_mode"
     ]
   },
   "ui": {}
